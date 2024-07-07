@@ -1,0 +1,233 @@
+:root {
+    --blue: #4FA0D0;
+    --blue-light: #75B9E1;
+    --orange: #ff9800;
+    --orange-light: #FFB039;
+    --green: #4AD890;
+    --green-light: #71E6AB;
+    --red: #EF5289;
+    --red-light: #F578A4;
+  
+    --popup-icon-size: 90px;
+    --popup-z-index: 10000;
+  
+    --animation-duration: .3s;
+  }
+  
+  .button {
+    margin-bottom: 4px;
+    padding: 8px 12px;
+    border: 1px solid var(--blue-light);
+    border-radius: 3px;
+    background: var(--blue);
+    cursor: pointer;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  
+  .button:focus {
+    outline: none;
+  }
+  
+  .button--warning {
+    border: 1px solid var(--orange-light);
+    background: var(--orange);
+  }
+  
+  .button--success {
+    border: 1px solid var(--green-light);
+    background: var(--green);
+  }
+  
+  .button--error {
+    border: 1px solid var(--red-light);
+    background: var(--red);
+  }
+  
+  .popup {
+    visibility: hidden;
+    transition: visibility 0ms linear var(--animation-duration);
+  }
+  
+  .popup--visible {
+    visibility: visible;
+    transition: visibility 0ms;
+  }
+  
+  .popup__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--popup-z-index);
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .4);
+    opacity: 0;
+    transition: opacity var(--animation-duration) ease-in-out;
+  }
+  
+  .popup--visible .popup__background {
+    opacity: 1;
+  }
+  
+  .popup__content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: calc(var(--popup-z-index) + 1);
+    min-width: 400px;
+    padding: 25px 50px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    text-align: center;
+    animation: hide-popup var(--animation-duration) forwards;
+  }
+  
+  .popup--visible .popup__content {
+    animation: show-popup var(--animation-duration) forwards;
+  }
+  
+  .popup--icon .popup__content {
+    padding-top: 130px;
+  }
+  
+  .popup--icon .popup__content:before,
+  .popup--icon .popup__content:after {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    height: var(--popup-icon-size);
+    width: var(--popup-icon-size);
+  }
+  
+  .popup--icon .popup__content:before {
+    content: '';
+    border: 3px solid currentColor;
+    border-radius: 50%;
+    transform: translateX(-50%) scale(1, 0);
+    opacity: 0;
+  }
+  
+  .popup--icon .popup__content:after {
+    content: '\2713';
+    line-height: var(--popup-icon-size);
+    font-size: 45px;
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+  }
+  
+  .popup--visible.popup--icon .popup__content:before {
+    animation: show-icon-circle var(--animation-duration) forwards calc(var(--animation-duration) / 2);
+  }
+  
+  .popup--visible.popup--icon .popup__content:after {
+    animation: show-icon var(--animation-duration) forwards var(--animation-duration);
+  }
+  
+  .popup--icon.-question .popup__content:before {
+    border-color: var(--orange);
+  }
+  
+  .popup--icon.-question .popup__content:after {
+    content: '?';
+    color: var(--orange);
+  }
+  
+  .popup--icon.-success .popup__content:before {
+    border-color: var(--green);
+  }
+  
+  .popup--icon.-success .popup__content:after {
+    content: '\2713';
+    color: var(--green);
+  }
+  
+  .popup--icon.-error .popup__content:before {
+    border-color: var(--red);
+  }
+  
+  .popup--icon.-error .popup__content:after {
+    content: '\2717';
+    color: var(--red);
+  }
+  
+  .popup__title {
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 100;
+    color: #626262;
+  }
+  
+  @keyframes show-popup {
+    0% {
+      transform: translate(-50%, -50%) scale(.7);
+      opacity: 0;
+    }
+    45% {
+      transform: translate(-50%, -50%) scale(1.05);
+      opacity: 1;
+    }
+    80% {
+      transform: translate(-50%, -50%) scale(.95);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+  @keyframes hide-popup {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(.5);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes show-icon {
+    0% {
+      transform: translateX(-50%) scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-50%) scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes show-icon-circle {
+    0% {
+      transform: translateX(-50%) scale(1, 0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-50%) scale(1, 1);
+      opacity: 1;
+    }
+  }
+/******FORMULARIO RECUPERACION******/
+.input-boxRecup{
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-boxRecup .inpup{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .input-boxRecup .bxs-envelope {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+  }  

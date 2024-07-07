@@ -1,0 +1,30 @@
+.content-tabla{
+    margin-left: 150px;
+}
+ /* Estilo para el contenedor de la tabla */
+ .table-responsive {
+    max-height: 400px; /* Altura máxima para 5 filas aprox */
+    overflow-y: auto; /* Scroll vertical */
+ }
+  /* Ajustar el tamaño de la fuente en la tabla */
+  .table {
+    font-size: 12px; 
+}
+.table .btn {
+    font-size: 12px; /* Tamaño de la fuente */
+    padding: 4px 6px; /* Ajusta el padding para hacer el botón más pequeño */
+    border-radius: 3px; /* Opcional: ajusta el radio de borde */
+}
+
+#horariosContainer {
+    font-size: 12px;
+    position: fixed;
+    bottom: 10px; /* Ajusta la distancia desde el borde inferior */
+    left: 180px; /* Ajusta la distancia desde el borde izquierdo */
+    width: 600px; /* Ajusta el ancho según sea necesario */
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    overflow-y: auto; /* Habilita el desplazamiento vertical si es necesario */
+    max-height: 200px; /* Ajusta la altura máxima según sea necesario */
+}

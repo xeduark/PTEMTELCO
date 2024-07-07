@@ -1,0 +1,153 @@
+:root {
+    --color-primary: #003366;
+    --color-secondary: #00b8eb;
+    --color-tertiary: #0098cb;
+    --color-border: #eee;
+    --color-text-primary: #333;
+    --color-text-secondary: #fff;
+    --color-accent: #FA289E;
+  }
+  
+  /* ESTILOS GENERALES */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+  }
+  
+  /* Input Forms */
+  input[type="text"],
+  input[type="password"] {
+    outline: none;
+    padding: 20px;
+    display: block;
+    width: 300px;
+    border-radius: 3px;
+    border: 1px solid var(--color-border);
+    margin: 20px auto;
+  }
+  
+  input[type="submit"] {
+    padding: 10px;
+    color: var(--color-text-secondary);
+    background: var(--color-tertiary);
+    width: 320px;
+    margin: 20px auto;
+    margin-top: 0;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: var(--color-secondary);
+  }
+  
+  /* Header */
+  header {
+    border-bottom: 2px solid var(--color-border);
+    padding: 20px 0;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  header a {
+    text-decoration: none;
+    color: var(--color-text-primary);
+  }
+  
+  /* Mensaje de Bienvenido */
+  #content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  #content .msjBienvenido .msjBienvenido2 {
+    font-size: 2rem;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .msjBienvenido {
+    color: var(--color-text-secondary);
+    font-weight: bold;
+  }
+  
+  .msjBienvenido2 {
+    font-size: 2rem;
+    font-family: "Arial", sans-serif;
+    color: var(--color-accent);
+  }
+  
+  /* Botones */
+  .link-1,
+  .link-2 {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+      7px 7px 20px 0px rgba(0, 0, 0, .1),
+      4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+  }
+  
+  .link-1 {
+    background-color: transparent;
+    color: var(--color-text-secondary);
+    border: 2px solid var(--color-accent);
+  }
+  
+  .link-1:hover {
+    background-color: var(--color-accent);
+  }
+  
+  .link-2 {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-text-secondary);
+  }
+  
+  .link-2:hover {
+    background-color: transparent;
+    border: 2px solid var(--color-accent);
+  }
+  
+  #contentBut {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Responsive Mensaje Bienvenido y Botones */
+  @media screen and (max-width: 768px) {
+    #content {
+      padding: 10px;
+      padding-top: 300px;
+    }
+  
+    .msjBienvenido,
+    .msjBienvenido2 {
+      font-size: 2rem;
+      position: relative;
+    }
+  
+    .link-1,
+    .link-2 {
+      margin-bottom: 10px;
+    }
+  }
+  

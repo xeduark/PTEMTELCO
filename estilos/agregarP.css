@@ -1,0 +1,31 @@
+form{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+/* Estilos personalizados para reducir el tamaño del formulario */
+form {
+    font-size: 0.875rem; /* Tamaño de fuente reducido */
+}
+
+form .form-label {
+    margin-bottom: 0.25rem; /* Reducir el espacio inferior de las etiquetas */
+}
+
+form .form-control {
+    padding: 0.25rem 0.5rem; /* Reducir el relleno de los campos de formulario */
+}
+
+form .mb-1 {
+    margin-bottom: 0.5rem; /* Reducir el margen inferior de los elementos del formulario */
+}
+
+form button {
+    font-size: 0.875rem; /* Tamaño de fuente reducido para el botón */
+    padding: 0.5rem 1rem; /* Relleno reducido para el botón */
+}
+.btn{
+    margin-top: 5px;
+}

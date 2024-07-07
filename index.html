@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a mi prueba EMTELCO</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="/estilos/footer.css">
+    <link rel="stylesheet" href="/estilos/load.css">
+    <link rel="stylesheet" href="/estilos/estilosIndex.css">
+    <script src="https://kit.fontawesome.com/162e2e5f40.js"></script>
+    <link rel="icon" type="image/png"
+        href="/imagenes/logo.png">
+    <style>
+        /* Estilos para ocultar solo el contenido principal */
+        #main-content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!--CARGA-->
+    <div class="load">
+        <hr />
+        <hr />
+        <hr />
+        <hr />
+    </div>
+
+
+    <div id="main-content">
+
+        <div id="content">
+            <h1 class="msjBienvenido">Bienvenido</h1>
+            <br>
+            <h1 class="msjBienvenido">Inicia sesión</h1>
+            <h1 class="msjBienvenido2"> o </h1>
+            <h1 class="msjBienvenido">crea una cuenta con nosotros</h1>
+            <br>
+            <div id="containerBut">
+                <a class="link-1" href="./modelo/login.php">Inicia sesión</a>
+                <a class="link-2" href="./modelo/registro.php">Regístrate</a>
+
+            </div>
+        </div>
+
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <h1 class="logo2">ptEMTELCO</h1>
+                    <p>Recibe las últimas actualizaciones y noticias directamente en tu correo electrónico</p>
+                </div>
+                <div class="col">
+                    <h3>Oficina<div class="underline"><span></span></div>
+                    </h3>
+                    <p>ITPL Road</p>
+                    <p>Medellin, Antioquia</p>
+                    <p>PIN 650054, Colombia</p>
+                    <p class="email-id">ptEMTELCO@gmail.com</p>
+                    <h4>+57 - 3003766780</h4>
+                </div>
+                <div class="col">
+                    <h3>Enlaces<div class="underline"><span></span></div>
+                    </h3>
+                    <ul>
+                        <li><a href="#">Hogar</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#">Caracteristicas</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Boletin informativo<div class="underline"><span></span></div>
+                    </h3>
+                    <form action="">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="Ingresa tu correo" required>
+                        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                    <div class="social-icons">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <i class="fa-brands fa-pinterest"></i>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="cop">ptEMTELCO 2024 | Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script>
+        // Espera 3 segundos y luego muestra el contenido principal
+        setTimeout(function () {
+            document.querySelector('.load').style.display = 'none'; // Oculta la animación de carga
+            document.getElementById('main-content').style.display = 'block'; // Muestra el contenido principal
+        }, 3000); // 3000 milisegundos = 3 segundos
+    </script>
+</body>
+
+</html>

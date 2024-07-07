@@ -1,0 +1,339 @@
+/****menu Dashboard******/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/**INICIO MENU DESPLEGABLE****/
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 115px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: #25283d;
+}
+
+.sidebar:hover {
+    width: 240px;
+    transition: 0.5s;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centra el logo horizontalmente */
+    padding: 0;
+    /* Espaciado alrededor del logo */
+    margin-bottom: 10px;
+    /* Espacio entre el logo y el menú */
+    margin-top: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    /* Altura automática */
+    margin-right: 10px;
+    /* Espacio a la derecha del logo */
+    border-radius: 100%;
+
+}
+
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover {
+    background: #FA289E;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.menu a {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span {
+    overflow: hidden;
+}
+
+.menu a i {
+    font-size: 1.2rem;
+}
+
+.logout {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*fin Css Menu Dashboard*/
+
+/*******responsive Menu*********/
+
+@media screen and (max-width: 768px) {
+    .sidebar.is_active {
+        transform: translate3d(0px, 0px, 0px);
+        width: 100%;
+        /* El menú ocupa todo el ancho en dispositivos pequeños */
+        transition: none;
+        /* Desactiva la transición en pantallas pequeñas */
+    }
+
+    .sidebar {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        overflow-y: scroll;
+        position: fixed;
+        top: 0;
+        transform: translate3d(0px, -100%, 0px);
+        transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+        z-index: 1001;
+    }
+
+    .sidebar ul li {
+        list-style: none;
+        text-align: center;
+        font-family: Verdadna, Arial, Helvetica;
+        text-transform: none;
+        font-weight: bold;
+    }
+
+    /* Desactiva el efecto hover en el menú desplegable */
+    .sidebar:hover .menu {
+        width: auto;
+        /* Mantén el ancho automático en pantallas pequeñas */
+    }
+
+    /* Estilos para el navbar en pantallas pequeñas */
+    .nav {
+        display: block;
+        /* Cambia a bloque para centrar verticalmente */
+        text-align: center;
+        /* Centra horizontalmente los elementos */
+    }
+
+    .nav-links {
+        display: block;
+        /* Cambia a bloque para centrar verticalmente */
+        padding: 10px 0;
+        /* Añade espacio entre los enlaces */
+    }
+
+    .nav-links>a {
+        display: block;
+        /* Convierte los enlaces en bloques para centrarlos */
+        color: #ffffff;
+        /* Ajusta el color del texto */
+        text-decoration: none;
+        /* Elimina la decoración de texto */
+    }
+}
+
+
+/*********fin responsive Menu*******/
+
+
+/********Navbar***********/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: 'segoe ui';
+}
+
+#navbar-container {
+    width: 100%;
+    /* Toma todo el ancho disponible */
+    position: fixed;
+    /* Asegura que el navbar esté fijo en la pantalla */
+    top: 0;
+    left: 0;
+}
+
+.nav {
+    height: 70px;
+    width: 100%;
+    background-color: #25283d;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;
+    align-items: center;
+}
+
+.nav>.nav-header {
+    display: inline;
+    flex: 1;
+}
+
+p {
+    margin-top: 15px;
+    color: #fff;
+}
+
+.nav>.nav-header>.nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+}
+
+.nav>.nav-links {
+    display: flex;
+    float: right;
+    gap: 10px;
+    font-size: 18px;
+    justify-content: flex-end;
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 10px 8px 10px 8px;
+    text-decoration: none;
+    color: #efefef;
+    margin: 8px 0;
+    /*margen para las opciones*/
+    border-radius: 6px;
+    /*estas opciones afectan al color rosa de los iconos exactamente el borde */
+}
+
+.nav>.nav-links>a:hover {
+    background-color: #FA289E;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav>#nav-check {
+    display: none;
+}
+
+.user-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-block-end: 10px;
+    border: 2px solid #50597b;
+}
+
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .nav {
+        display: none;
+        /* Oculta el navbar en dispositivos con un ancho de pantalla de 768px o menos */
+    }
+}
+
+/*******FIN NAVBAR******/
+
+/*HAMBURGUESA*/
+.hamburger {
+    display: none;
+    position: fixed;
+    background-color: transparent;
+    left: 15px;
+    top: 25px;
+    height: 30px;
+    width: 30px;
+    padding: 20px 20px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    z-index: 1002;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.hamburger.is-active {
+    background-color: none;
+}
+
+._layer {
+    background: #333333;
+    margin-bottom: 4px;
+    border-radius: 2px;
+    width: 28px;
+    height: 4px;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+
+.hamburger:hover .-top {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.hamburger:hover .-bottom {
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+}
+
+.hamburger.is-active .-top {
+    -webkit-transform: translateY(200%) rotate(45deg) !important;
+    -ms-transform: translateY(200%) rotate(45deg) !important;
+    transform: translateY(200%) rotate(45deg) !important;
+}
+
+.hamburger.is-active .-mid {
+    opacity: 0;
+}
+
+.hamburger.is-active .-bottom {
+    -webkit-transform: translateY(-200%) rotate(135deg) !important;
+    -ms-transform: translateY(-200%) rotate(135deg) !important;
+    transform: translateY(-200%) rotate(135deg) !important;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    ._layer {
+        background: #FA289E;
+    }
+}
